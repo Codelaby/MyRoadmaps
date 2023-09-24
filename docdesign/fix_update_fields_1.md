@@ -30,9 +30,9 @@ Para incorporar estos nuevos campos en la tabla de "Code Snippets", se realizar√
 
 ```sql
 ALTER TABLE code_snippets
-ADD COLUMN media TEXT,
-ADD COLUMN src_link TEXT,
-ADD COLUMN score INTEGER;
+ADD COLUMN media TEXT NULL,
+ADD COLUMN src_link TEXT NULL,
+ADD COLUMN score BIGINT NULL DEFAULT '0'::bigint;
 ```
 
 ## Funcionalidad Adicional
