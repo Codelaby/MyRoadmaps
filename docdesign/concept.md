@@ -12,6 +12,7 @@ El sistema debe permitir a los usuarios almacenar code snippets, incluyendo la s
 
 - **Lenguaje de Programación**: El lenguaje de programación al que pertenece el snippet.
 - **Categoría**: Una categorización que ayuda a organizar y buscar snippets relacionados.
+- **autor**: Autor de la publicación.
 - **Título**: Un título descriptivo para el snippet.
 - **Trozo de Código**: El código en sí mismo.
 - **Fecha de Publicación**: La fecha en que se creó o se guardó el snippet.
