@@ -26,6 +26,24 @@ Esta documentación técnica describe la estructura y la funcionalidad de la tab
 
 9. `created_at` (Fecha y Hora): La fecha y hora en que se creó el code snippet.
 
+## Creación de la tabla
+En supabase crear la tabla con nombre codesnippets
+
+```sql
+create table
+  public.codesnippets (
+    id uuid not null default gen_random_uuid (),
+    category text null,
+    label text[] null,
+    title text null,
+    description text null,
+    code_lang text null,
+    code text null,
+    author text null,
+    created_at timestamp with time zone not null default now(),
+    constraint codesnippets_pkey primary key (id)
+  ) tablespace pg_default;
+```
 ### Restricciones y Notas
 
 - El campo `id` es único y se genera automáticamente mediante la función `uuid_generate_v4()`.
