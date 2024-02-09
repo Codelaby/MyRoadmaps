@@ -1,4 +1,4 @@
-# Documento de Diseño: Normalización de Datos del Calendario de Eventos de Premios de Fórmula 1
+# Normalización de Datos del Calendario de Eventos de Premios de Fórmula 1
 
 ## Título y Personas
 
