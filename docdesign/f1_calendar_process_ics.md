@@ -37,6 +37,8 @@ Se propone utilizar Python para procesar el archivo .ICS y extraer los campos re
 
 ## Recursos de Soporte
 
+La fuente de datos utilizada para la extracción de eventos relacionados con la Fórmula 1 es el sitio web https://f1calendar.com/es/generate. Este sitio proporciona un servicio para generar calendarios personalizados de eventos de Fórmula 1, ofreciendo información detallada sobre las fechas, horarios y ubicaciones de cada carrera, clasificación y sesión de práctica. Utilizamos este servicio para obtener un archivo en formato .ICS que contiene los datos de los eventos, los cuales posteriormente procesamos y normalizamos utilizando Python y las bibliotecas adecuadas para su posterior análisis y uso en nuestras aplicaciones o sistemas.
+
 Para facilitar la implementación del proceso de normalización de datos, se proporcionarán los siguientes recursos:
 
 - Documentación de las bibliotecas utilizadas en el proceso, incluyendo ejemplos y guías de uso.
