@@ -5,7 +5,7 @@
  - App: Timekit
  - Plataforma: SwiftUI
  - Autor: Codelaby
- - Fecha limite: Miercoles, 14 de Febrero 2024
+ - Fecha limite: Miercoles, 12 de Febrero 2024
  - Revisores: Codelaby
  - Última Actualización: Lunes, 12 Febrero del 2024
 
@@ -72,9 +72,9 @@ Descripción: Este artículo proporciona una guía detallada sobre cómo impleme
 - ✅ Diseñar la estructura de archivos de strings localizados: Jueves, 8 de Febrero del 2024
 - ✅ Marcar y identificar las cadenas de texto para traducción: Jueves, 8 de Febrero del 2024
 - ✅ Crear archivos de strings localizados y proporcionar traducciones: Lunes, 12 de Febrero del 2024
-- ✅ Implementar la lógica de localización en SwiftUI: Martes, 13 de Febrero del 2024
-- ⬜ Pruebas exhaustivas y ajustes finales: Miercoles, 14 de Febrero del 2024
-- ⬜ Lanzamiento y monitorización inicial: Miercoles, 14 de Febrero del 2024
+- ✅ Implementar la lógica de localización en SwiftUI: Martes, 12 de Febrero del 2024
+- ⬜ Pruebas exhaustivas y ajustes finales: Miercoles, 12 de Febrero del 2024
+- ⬜ Lanzamiento y monitorización inicial: Miercoles, 12 de Febrero del 2024
 
 ---
 
