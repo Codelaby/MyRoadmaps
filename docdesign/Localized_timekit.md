@@ -73,7 +73,7 @@ Descripción: Este artículo proporciona una guía detallada sobre cómo impleme
 - ✅ Marcar y identificar las cadenas de texto para traducción: Jueves, 8 de Febrero del 2024
 - ✅ Crear archivos de strings localizados y proporcionar traducciones: Lunes, 12 de Febrero del 2024
 - ✅ Implementar la lógica de localización en SwiftUI: Martes, 12 de Febrero del 2024
-- ⬜ Pruebas exhaustivas y ajustes finales: Miercoles, 12 de Febrero del 2024
+- ✅ Pruebas exhaustivas y ajustes finales: Miercoles, 12 de Febrero del 2024
 - ⬜ Lanzamiento y monitorización inicial: Miercoles, 12 de Febrero del 2024
 
 ---
