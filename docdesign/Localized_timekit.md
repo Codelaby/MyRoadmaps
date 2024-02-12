@@ -7,7 +7,7 @@
  - Autor: Codelaby
  - Fecha limite: Miercoles, 14 de Febrero 2024
  - Revisores: Codelaby
- - Última Actualización: Jueves, 8 Febrero del 2024
+ - Última Actualización: Lunes, 12 Febrero del 2024
 
 ## Resumen
 El objetivo de este documento es diseñar e implementar la funcionalidad de localización de texto en la aplicación Timekit. Esta característica permitirá la traducción de cadenas de texto para admitir diferentes idiomas, incluidos inglés y español. Se probará con cadenas en singular y plural, así como con diferentes formas de notificaciones.
@@ -69,12 +69,12 @@ Descripción: Este artículo proporciona una guía detallada sobre cómo impleme
 - ¿Qué herramientas utilizaremos para gestionar las traducciones y coordinar el trabajo entre el equipo de desarrollo y los traductores?
 
 ## Detalles de Planificación y Cronograma
-- Diseñar la estructura de archivos de strings localizados: Jueves, 8 de Febrero del 2024
-- Marcar y identificar las cadenas de texto para traducción: Jueves, 8 de Febrero del 2024
-- Crear archivos de strings localizados y proporcionar traducciones: Lunes, 12 de Febrero del 2024
-- Implementar la lógica de localización en SwiftUI: Martes, 13 de Febrero del 2024
-- Pruebas exhaustivas y ajustes finales: Miercoles, 14 de Febrero del 2024
-- Lanzamiento y monitorización inicial: Miercoles, 14 de Febrero del 2024
+- ✅ Diseñar la estructura de archivos de strings localizados: Jueves, 8 de Febrero del 2024
+- ✅ Marcar y identificar las cadenas de texto para traducción: Jueves, 8 de Febrero del 2024
+- ✅ Crear archivos de strings localizados y proporcionar traducciones: Lunes, 12 de Febrero del 2024
+- ✅ Implementar la lógica de localización en SwiftUI: Martes, 13 de Febrero del 2024
+- ⬜ Pruebas exhaustivas y ajustes finales: Miercoles, 14 de Febrero del 2024
+- ⬜ Lanzamiento y monitorización inicial: Miercoles, 14 de Febrero del 2024
 
 ---
 
