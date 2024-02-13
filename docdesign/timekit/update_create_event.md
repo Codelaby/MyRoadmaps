@@ -50,6 +50,66 @@ Documentación sobre las mejores prácticas para la migración de datos en aplic
 
 ## Implementación Técnica
 - Utilizar validación de patrones de expresiones regulares para verificar la estructura del enlace introducido por el usuario.
+```swift
+struct URLRule: ValidationRule {
+    func validate(_ value: String) -> Result<String, ErrorMessage> {
+        
+        guard !value.isEmpty else {
+            return .success("")
+        }
+        
+        // Si la URL no tiene un esquema (scheme), añadir "https://" por defecto
+        var urlString = value
+        if URL(string: value)?.scheme == nil {
+            urlString = "https://" + value
+        }
+        
+        // Crear una URL a partir del valor proporcionado
+        guard let url = URL(string: urlString) else {
+            return .failure("URL inválida")
+        }
+        
+        // Verificar si la URL tiene un esquema válido (http o https)
+        guard let scheme = url.scheme, ["http", "https"].contains(scheme) else {
+            return .failure("URL inválida. Debe comenzar con http:// o https://")
+        }
+       
+        // URL válida
+        return .success(url.absoluteString)
+    }
+}
+//su uso
+VStack {
+    TextField("url", text: $urlField)
+        .keyboardType(.URL)
+        .autocorrectionDisabled()
+        .textInputAutocapitalization(.never)
+    
+    Text(errorMessages["url_field"] ?? "")
+        .font(.caption)
+        .foregroundColor(.red)
+}
+.validate($urlField, rule: URLRule()) { result in
+    switch result {
+    case .success(_):
+        errorMessages["url_field"] = ""
+    case .failure(let errorMessage):
+        errorMessages["url_field"] = errorMessage.description
+    }
+}
+//en cualquier parte
+let urlRule = URLRule()
+let urlValidationResult = urlRule.validate(urlField)
+
+switch urlValidationResult {
+case .success(let value):
+    print(value)
+    errorMessages["url_field"] = ""
+case .failure(let errorMessage):
+    errorMessages["url_field"] = errorMessage.description
+}
+```
+
 - Implementar un picker de color con una lista de colores predefinidos.
 - Utilizar la lógica de migración de datos para asignar colores predeterminados basados en el nombre y la fecha del evento.
 ```swift
