@@ -1,0 +1,136 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "paywall_agrement": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "With your purchase, you agree to our terms and conditions."
+          }
+        }
+      }
+    },
+    "paywall_privacy_policy": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacy Policy"
+          }
+        }
+      }
+    },
+    "paywall_privacy_policy_abbr": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Policy"
+          }
+        }
+      }
+    },
+    "paywall_purchase_completed_summary": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You are already a PRO user, enjoy all the functions."
+          }
+        }
+      }
+    },
+    "paywall_purchase_completed_title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thank you"
+          }
+        }
+      }
+    },
+    "paywall_restore_purchase": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore Purchase"
+          }
+        }
+      }
+    },
+    "paywall_restore_purchase_abbr": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restore"
+          }
+        }
+      }
+    },
+    "paywall_terms_of_use": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terms of Use"
+          }
+        }
+      }
+    },
+    "paywall_terms_of_use_abbr": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Terms"
+          }
+        }
+      }
+    },
+    "paywall_upgrade_beneffits_list": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "✨ Unlock all options\n🎨 Unlock full color picker\n❤️ Support an indie developer"
+          }
+        }
+      }
+    },
+    "paywall_upgrade_beneffits_title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlock all features with this upgrade."
+          }
+        }
+      }
+    },
+    "paywall_upgrade_granted": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pro features are unlocked, Thank You!"
+          }
+        }
+      }
+    },
+    "paywall_upgrade_title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upgrade to Pro"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

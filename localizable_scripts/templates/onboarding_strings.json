@@ -1,0 +1,22 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "onboarding_welcome_privacy_notice": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Price of Light does not collect any of your personal data. By using the app, you agree to be bound by the terms and conditions of the app. For more information [See terms and conditions](https://codelaby.github.io/eula)."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Precio de la luz no recopila ninguno de sus datos personales. Al usar la aplicación, usted acepta estar sujeto a los términos y condiciones de la app. Para más información [Ver términos y condiciones](https://codelaby.github.io/eula)."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

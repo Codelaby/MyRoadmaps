@@ -1,0 +1,112 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "onboarding_nav_go": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Let's go!"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "needs_review",
+            "value": "Vemos!"
+          }
+        }
+      }
+    },
+    "onboarding_welcome_feature_one_summary": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stay motivated and organized by visualizing your progress through the current year."
+          }
+        }
+      }
+    },
+    "onboarding_welcome_feature_one_title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Track Your Yearly Progress"
+          }
+        }
+      }
+    },
+    "onboarding_welcome_feature_three_summary": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toolkit for everything you need to efficiently manage, manipulate and analyze dates for various purposes."
+          }
+        }
+      }
+    },
+    "onboarding_welcome_feature_three_title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Date Swiss Army Knife"
+          }
+        }
+      }
+    },
+    "onboarding_welcome_feature_two_summary": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compare Dates simplifies the process, allowing you to swiftly calculate the time elapsed between any two dates."
+          }
+        }
+      }
+    },
+    "onboarding_welcome_feature_two_title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Effortless Date Comparison"
+          }
+        }
+      }
+    },
+    "onboarding_welcome_privacy_notice": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My Date Calc does not collect any of your personal data. By using the app, you agree to be bound by the terms and conditions of the app. For more information [See terms and conditions](https://webserveis.netlify.app/eula)."
+          }
+        }
+      }
+    },
+    "onboarding_welcome_summary": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your Ultimate Date Calculator Companion"
+          }
+        }
+      }
+    },
+    "onboarding_whats_new_title%@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What's the new %@"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

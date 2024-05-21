@@ -1,0 +1,32 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "launchscreen_error%@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opps! %@"
+          }
+        }
+      }
+    },
+    "launchscreen_welcome_title%@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welcome to %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bienvenido a %@"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

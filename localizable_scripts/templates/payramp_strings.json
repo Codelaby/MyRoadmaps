@@ -1,0 +1,36 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "payramp_pro_button": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PRO Version"
+          }
+        }
+      }
+    },
+    "payramp_pro_features": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlock all options\nUnlock full color picker\nSupport an indie developer"
+          }
+        }
+      }
+    },
+    "payramp_pro_title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "More options with PRO version:"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
