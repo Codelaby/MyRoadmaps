@@ -313,3 +313,18 @@ struct NavSimpleStructDemo: View {
     OnboardingView()
         .environment(ViewRouterManager())
 }
+
+
+//Application
+import SwiftUI
+
+@main
+struct NavigationSimple: App {
+    
+    var body: some Scene {
+        WindowGroup {
+            RouterView()
+                .environment(viewModel)
+        }
+    }
+}
