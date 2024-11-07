@@ -158,24 +158,63 @@ enum ViewRouterFullScreen {
 }
 
 //viewRouter.sheet = .welcome
-enum ViewRouterSheet {
-    
+enum ViewRouterSheet: Equatable {
     case none
     case onboarding
-    
+    case readBook(BookItem)  // Incluye una instancia de BookItem en el caso
+
     @MainActor
     @ViewBuilder
     var view: some View {
         switch self {
-            case .none: EmptyView()
-            case .onboarding: OnboardingView()
-            
+            case .none:
+                EmptyView()
+            case .onboarding:
+                OnboardingView()
+            case .readBook(let item):  // Usa 'let' para obtener la instancia de BookItem
+                ReadBookView(item: item)
         }
     }
-    
 }
 
-// MARK: Define Root Views
+// MARK: Define global routes
+enum DestinationRoute: Identifiable, Codable, Hashable {
+    var id: Self { self }
+    
+    case settings
+    
+    @MainActor
+    @ViewBuilder
+    static func handleRoute(_ route: DestinationRoute) -> some View {
+        switch route {
+            case .settings:
+                SettingsView()
+        }
+    }
+}
+
+// MARK: Define Child routes
+
+enum BooksRoute: Identifiable, Codable, Hashable {
+    var id: Self { self }
+    
+    //case list
+    //case create
+    case detail(item: BookItem)
+    
+    @MainActor
+    @ViewBuilder
+    static func handleRoute(_ route: BooksRoute) -> some View {
+        switch route {
+            case .detail(item: let book):
+                DetailBookView(item: book)
+        }
+    }
+}
+
+
+
+// MARK: Root Views
 
 struct LaunchScreenView: View {
     
@@ -217,21 +256,7 @@ struct SettingsView: View {
 }
 
 
-// MARK: Define destination routes
-enum DestinationRoute: Identifiable, Codable, Hashable {
-    var id: Self { self }
-    
-    case settings
-    
-    @MainActor
-    @ViewBuilder
-    static func handleRoute(_ route: DestinationRoute) -> some View {
-        switch route {
-            case .settings:
-                SettingsView()
-        }
-    }
-}
+
 
 // MARK: Model and DataViewModel
 
@@ -256,7 +281,7 @@ final class MyViewModel {
        }
 }
 
-// MARK: Define Destination Views
+// MARK: Destination Views
 
 struct ProfileView: View {
     
@@ -270,10 +295,6 @@ struct ProfileView: View {
     }
 }
 
-#Preview("Profile View") {
-    ProfileView()
-        .environment(ViewRouterManager())
-}
 
 struct ListBookView: View {
     
@@ -303,11 +324,6 @@ struct ListBookView: View {
 
 }
 
-#Preview("List Book") {
-    ListBookView()
-        .environment(ViewRouterManager())
-}
-
 
 struct DetailBookView: View {
     
@@ -320,42 +336,40 @@ struct DetailBookView: View {
         VStack {
             Text("Detail uid: \(item.id)")
             Text("title:\(item.title)")
-        }
-    }
-}
-
-#Preview("Detail Book") {
-    DetailBookView(item: BookItem(title: "sample book", author: "sample author"))
-        .environment(ViewRouterManager())
-}
-
-// MARK: Define Nesteed destination routes
-
-enum BooksRoute: Identifiable, Codable, Hashable {
-    var id: Self { self }
-    
-    //case list
-    //case create
-    case detail(item: BookItem)
-    
-    @MainActor
-    @ViewBuilder
-    static func handleRoute(_ route: BooksRoute) -> some View {
-        switch route {
-            case .detail(item: let book):
-                DetailBookView(item: book)
+            
+            Button("Read") {
+                viewRouter.sheet = .readBook(item)
+            }
         }
     }
 }
 
 
-// MARK: Define TabView enums
 
 
-// MARK: Define Root main View
+struct ReadBookView: View {
+    
+    //@EnvironmentObject private var viewRouter: ViewRouterManager
+    @Environment(ViewRouterManager.self) private var viewRouter: ViewRouterManager
+
+    @State var item: BookItem
+    
+    var body: some View {
+        VStack {
+            Button("Close") {
+                viewRouter.sheet = .none
+            }
+            Text("Read 5 pages").font(.largeTitle)
+            Text("Detail uid: \(item.id)")
+            Text("title:\(item.title)")
+        }
+    }
+}
 
 
 
+
+// MARK: Main View
 
 struct MainContentView: View {
 
@@ -443,11 +457,9 @@ struct NavSimpleStructDemo: View {
 
 // MARK: Preview zone
 
-#Preview {
+#Preview("Nav") {
     NavSimpleStructDemo()
 }
-
-
 
 #Preview("LaunchScreen") {
     LaunchScreenView()
@@ -467,5 +479,25 @@ struct NavSimpleStructDemo: View {
 #Preview("OnboardingView") {
     
     OnboardingView()
+        .environment(ViewRouterManager())
+}
+
+#Preview("Profile View") {
+    ProfileView()
+        .environment(ViewRouterManager())
+}
+
+#Preview("List Book") {
+    ListBookView()
+        .environment(ViewRouterManager())
+}
+
+#Preview("Detail Book") {
+    DetailBookView(item: BookItem(title: "sample book", author: "sample author"))
+        .environment(ViewRouterManager())
+}
+
+#Preview("Read book") {
+    ReadBookView(item: BookItem(title: "sample book", author: "sample author"))
         .environment(ViewRouterManager())
 }
