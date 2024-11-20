@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//Dependencies: AsyncSemaphore https://github.com/groue/Semaphore
+
 // MARK: Model
 enum MusicGenre: String, Identifiable, CaseIterable, Hashable, Sendable, CustomStringConvertible {
     case classical = "Classical"
@@ -121,6 +123,7 @@ protocol MusicRepository: Sendable {
     func fetchAllSongs() async throws -> [SongModel]
 }
 
+
 actor MusicRepositoryImpl: MusicRepository {
     
     private let dataSource: SongDataSource
@@ -132,19 +135,18 @@ actor MusicRepositoryImpl: MusicRepository {
         self.dataSource = dataSource
     }
     
-    
     func fetchAllSongs() async throws -> [SongModel] {
         let key = cacheKey
         if let cachedData = cache[key] {
-            print("🛟 fetch all data from cache")
+            print("🛟 fetch all data from cache", cachedData.count)
             return cachedData
             //return .success(cachedData)
             //return cachedData
         } else {
             print("☁️ fetch all data from source")
             
-            print("⏳ Whait 2 seconds")
-            try await Task.sleep(for: .seconds(2)) // Simulate a network delay
+            print("⏳ Whait 5 seconds")
+            try await Task.sleep(for: .seconds(5)) // Simulate a network delay
             
             let processedData = try! await dataSource.fetchAllSongs()
             cache[key] = processedData
@@ -175,6 +177,8 @@ protocol MusicUseCase: Sendable {
 final class MusicUseCaseImpl: MusicUseCase {
     let repository: MusicRepository
     
+    private let semaphore = AsyncSemaphore(value: 1)
+    
     init(repository: MusicRepository) {
         self.repository = repository
     }
@@ -182,17 +186,33 @@ final class MusicUseCaseImpl: MusicUseCase {
     func execute() async -> Result<[SongModel], Error> {
         print("usecase: MusicUseCase.execute")
         do {
+            
+            print("🚦 Wait for the semaphore")
+            await semaphore.wait()
+            
             print("⏳ Whait 1 seconds")
             try await Task.sleep(for: .seconds(1)) // Simulate a network delay
             
             let data = try await repository.fetchAllSongs()
+            
+            print("🚦 Semaphore signal")
+            defer { semaphore.signal() }
+            
             return .success(data)
         
         } catch is CancellationError {
             print("usecase: ✋ CancellationError")
+            
+            print("🚦 Semaphore signal")
+            defer { semaphore.signal() }
+            
             return .failure(MusicError.cancellationError)
 
         } catch {
+            
+            print("🚦 Semaphore signal")
+            defer { semaphore.signal() }
+            
             return .failure(error)
 
         }
@@ -242,6 +262,8 @@ final class MusicViewModel { //: @unchecked Sendable
     
     //use case
     let getMusicUseCase: MusicUseCase
+    
+
     
     init(repository: MusicRepository) {
         self.repository = repository
@@ -305,6 +327,7 @@ final class MusicViewModel { //: @unchecked Sendable
             
         case .failure(let error):
             if Task.isCancelled {
+                //repository.semaphore.signal()
                 print("vm: ✋ last task was cancelled", error)
             } else {
                 filteredMusic = .failure(error)
@@ -360,6 +383,7 @@ struct MusicListView: View {
                         description: Text("Failed to load songs.\(error.localizedDescription)")
                     )
                 case .success(let songs) where songs.isEmpty:
+                    let _ = Self._printChanges()
                     // Handle empty state
                     if searchText.isEmpty {
                         ContentUnavailableView(
@@ -383,13 +407,9 @@ struct MusicListView: View {
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
                         }
-                        //                        .frame(maxWidth: .infinity, minHeight: 48, alignment: .leading)
-                        //                        .padding(.horizontal)
                     }
-                    
-                    
-                    
-                    
+                    .scrollDismissesKeyboard(.automatic)
+
                 }
             }
             .searchable(text: $searchText, isPresented: $isPresented, placement: .toolbar, prompt:  Text("Search"))
@@ -398,11 +418,6 @@ struct MusicListView: View {
             .onAppear {
                 viewModel.getAllSongs()
             }
-            //            .onChange(of: selectedScope) { _, newScope in
-            //                  Task {
-            //                      try await viewModel.filterSongs(for: newScope, searchText: searchText)
-            //                  }
-            //              }
             .task(id: selectedScope) {
                 do {
                     try await performSearch(scope: selectedScope, query: searchText)
