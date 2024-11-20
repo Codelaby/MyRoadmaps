@@ -4,7 +4,11 @@
 //
 //  Created by Codelaby on 9/11/24.
 //
-
+/*
+He implementado un sistema de filtrado por alcance y búsqueda en Swift 6, utilizando Clean Architecture.
+Para optimizar el rendimiento, he incorporado cancelación de tareas y semáforos para garantizar que la búsqueda solo se ejecute una vez que todos los datos estén cargados.
+Esto proporciona una experiencia de usuario más fluida, evitando resultados parciales mientras se cargan los datos.
+*/
 import SwiftUI
 
 //Dependencies: AsyncSemaphore https://github.com/groue/Semaphore
