@@ -9,9 +9,14 @@ He implementado un sistema de filtrado por alcance y búsqueda en Swift 6, utili
 Para optimizar el rendimiento, he incorporado cancelación de tareas y semáforos para garantizar que la búsqueda solo se ejecute una vez que todos los datos estén cargados.
 Esto proporciona una experiencia de usuario más fluida, evitando resultados parciales mientras se cargan los datos.
 */
-import SwiftUI
+//
+//  SearchScopePlayground.swift
+//  FieldsPlayground
+//
+//  Created by Codelaby on 9/11/24.
+//
 
-//Dependencies: AsyncSemaphore https://github.com/groue/Semaphore
+import SwiftUI
 
 // MARK: Model
 enum MusicGenre: String, Identifiable, CaseIterable, Hashable, Sendable, CustomStringConvertible {
@@ -127,7 +132,6 @@ protocol MusicRepository: Sendable {
     func fetchAllSongs() async throws -> [SongModel]
 }
 
-
 actor MusicRepositoryImpl: MusicRepository {
     
     private let dataSource: SongDataSource
@@ -167,62 +171,77 @@ actor MusicRepositoryImpl: MusicRepository {
 // MARK: Use Case
 
 enum MusicError: Error {
-    case networkError(String)
-    case dataProcessingError(String)
     case cancellationError
 }
 
 protocol MusicUseCase: Sendable {
     var repository: MusicRepository { get }
-    func execute() async -> Result<[SongModel], Error>
+    func execute(for scope:  SearchScopeOption, with searchText: String) async -> Result<[SongModel], Error>
     init(repository: MusicRepository)
 }
 
 final class MusicUseCaseImpl: MusicUseCase {
     let repository: MusicRepository
-    
     private let semaphore = AsyncSemaphore(value: 1)
-    
+
     init(repository: MusicRepository) {
         self.repository = repository
     }
-    
-    func execute() async -> Result<[SongModel], Error> {
-        print("usecase: MusicUseCase.execute")
+
+    func execute(for scope: SearchScopeOption, with searchText: String) async -> Result<[SongModel], Error> {
+        print("usecase: MusicUseCase.execute", "for: \(scope)", "with:\(searchText)")
         do {
-            
-            print("🚦 Wait for the semaphore")
-            await semaphore.wait()
-            
-            print("⏳ Whait 1 seconds")
-            try await Task.sleep(for: .seconds(1)) // Simulate a network delay
-            
+            await semaphore.wait() // Wait for the semaphore to become available, limiting concurrent executions to one
+            print("usecase", "🚥 run race")
+            print("⏳ Simulating network delay...")
+            try await Task.sleep(for: .seconds(1))
+
             let data = try await repository.fetchAllSongs()
             
-            print("🚦 Semaphore signal")
-            defer { semaphore.signal() }
-            
-            return .success(data)
-        
+            let filteredData = filterByScopeAndTerm(from: data, scope: scope, searchText: searchText)
+
+            defer { semaphore.signal() } // Release the semaphore to allow other tasks to proceed
+            print("usecase", "🏁 end race")
+
+            return .success(filteredData)
         } catch is CancellationError {
-            print("usecase: ✋ CancellationError")
-            
-            print("🚦 Semaphore signal")
-            defer { semaphore.signal() }
-            
+            print("usecase:", "✋ Cancellation requested: releasing the 🚦 and returning a cancellation error")
+            defer { semaphore.signal() } // send signal for run other task
             return .failure(MusicError.cancellationError)
-
         } catch {
-            
-            print("🚦 Semaphore signal")
-            defer { semaphore.signal() }
-            
+            print("usecase:", "❗️An unexpected error occurred: releasing the 🚦 and returning the error")
+            defer { semaphore.signal() } // send signal for run other task
             return .failure(error)
+        }
+    }
 
+    /// Filters the songs based on scope and search text.
+    private func filterByScopeAndTerm(from data: [SongModel], scope: SearchScopeOption, searchText: String) -> [SongModel] {
+        let scopeFiltered = filterByScope(from: data, for: scope)
+        return filterByTerm(from: scopeFiltered, searchText: searchText)
+    }
+
+    /// Filters songs by scope.
+    private func filterByScope(from data: [SongModel], for scope: SearchScopeOption) -> [SongModel] {
+        return data.filter { song in
+            switch scope {
+            case .all:
+                return true
+            case .genre(let genre):
+                return song.genres.contains(genre)
+            }
+        }
+    }
+
+    /// Filters songs by search term.
+    private func filterByTerm(from data: [SongModel], searchText: String) -> [SongModel] {
+        guard !searchText.isEmpty else { return data }
+        return data.filter { song in
+            song.title.localizedCaseInsensitiveContains(searchText) ||
+            song.genres.map(\.rawValue).joined(separator: ", ").localizedCaseInsensitiveContains(searchText)
         }
     }
 }
-
 
 // MARK: Result Types
 
@@ -231,6 +250,12 @@ enum DataListState<T: Sendable>: Sendable {
     case working
     case failure(Error)
     case success(T)
+    
+    mutating func startWorking() {
+        if !isFirstLoading() && !isWorking() {
+            self = .working
+        }
+    }
     
     func isFirstLoading() -> Bool {
         if case .firstLoading = self {
@@ -256,13 +281,15 @@ enum DataListState<T: Sendable>: Sendable {
 
 // MARK: ViewModel
 
-//@MainActor
+@MainActor
 @Observable
 final class MusicViewModel { //: @unchecked Sendable
     private let repository: MusicRepository
     
     private(set) var filteredMusic: DataListState<[SongModel]> = .firstLoading
     private(set) var availableGenres: [SearchScopeOption] = [.all] // Empieza con "All"
+    
+    private(set) var lastSearchTerm: String = ""
     
     //use case
     let getMusicUseCase: MusicUseCase
@@ -274,81 +301,51 @@ final class MusicViewModel { //: @unchecked Sendable
         self.getMusicUseCase = MusicUseCaseImpl(repository: repository)
     }
     
-    @MainActor
-    func getAllSongs() {
-        print("vm: getAllSongs")
-        filteredMusic = .working
-        Task(priority: .background) {
-            let result = await getMusicUseCase.execute()
-            
-            switch result {
-            case .success(let songs):
-                let genres = Set(songs.flatMap { $0.genres })
-                availableGenres = [.all] + genres.map { .genre(option: $0) }.sorted { $0.title < $1.title }
-                
-                // Inicialmente, muestra todas las canciones
-                filteredMusic = .success(songs)
-                
-            case .failure(let error):
-                filteredMusic = .failure(error)
-                
-            }
-            // Update genres
-            
-            
-        }
-    }
     
-    @MainActor
-    func filterSongs( for scope:  SearchScopeOption, searchText: String) async throws {
+    //@MainActor
+    func filterSongs(for scope: SearchScopeOption, searchText: String) async throws {
         print("vm: filterSongs")
         print("🔎 filterSongs", scope.title, searchText)
         
-        filteredMusic = .working
-        
-        let result = await getMusicUseCase.execute()
+        filteredMusic.startWorking()
+
+        let result = await getMusicUseCase.execute(for: scope, with: searchText)
         
         switch(result) {
-        case .success(let allSongs):
+        case .success(let songs):
+            print("vm:", "👉 candidates \(songs.count)")
             
-            let filtered = allSongs.filter { song in
-                let matchesScope: Bool
-                switch scope {
-                case .all:
-                    matchesScope = true
-                case .genre(let genre):
-                    matchesScope = song.genres.contains(genre)
-                }
+            // For generate genres scope search
+            if availableGenres.count <= 1 {
+                let genres = Set(songs.flatMap { $0.genres })
+                let candidates: [SearchScopeOption] = [.all] + genres.map {.genre(option: $0) }.sorted { $0.title < $1.title }
                 
-                let matchesSearchText = searchText.isEmpty ||
-                song.title.localizedCaseInsensitiveContains(searchText) ||
-                song.genres.map(\.rawValue).joined(separator: ", ").localizedCaseInsensitiveContains(searchText)
-                return matchesScope && matchesSearchText
+                Task { @MainActor in // Update genres
+                    
+                    availableGenres = candidates
+                }
             }
-            print("👉 Candidates", filtered.count)
             
-            filteredMusic = .success(filtered)
+            Task { @MainActor in
+                lastSearchTerm = searchText
+                filteredMusic = .success(songs)
+            }
             
         case .failure(let error):
             if Task.isCancelled {
                 //repository.semaphore.signal()
                 print("vm: ✋ last task was cancelled", error)
             } else {
-                filteredMusic = .failure(error)
-                
+                Task { @MainActor in
+                    filteredMusic = .failure(error)
+                }
             }
             //filteredMusic = .failure(error)
         }
         
-        
     }
     
-    
-    
 }
-
-
-
 
 // MARK: List View
 struct MusicListView: View {
@@ -356,6 +353,7 @@ struct MusicListView: View {
     
     @State private var isPresented = false
     @State private var searchText: String = ""
+
     @State private var selectedScope: SearchScopeOption = .all // Scope seleccionado
     
     
@@ -389,7 +387,7 @@ struct MusicListView: View {
                 case .success(let songs) where songs.isEmpty:
                     let _ = Self._printChanges()
                     // Handle empty state
-                    if searchText.isEmpty {
+                    if viewModel.lastSearchTerm.isEmpty {
                         ContentUnavailableView(
                             "No songs available.",
                             systemImage: "exclamationmark.circle.fill",
@@ -397,7 +395,7 @@ struct MusicListView: View {
                         )
                     } else {
                         ContentUnavailableView
-                            .search(text: searchText)
+                            .search(text: viewModel.lastSearchTerm)
                     }
                     
                     
@@ -419,10 +417,8 @@ struct MusicListView: View {
             .searchable(text: $searchText, isPresented: $isPresented, placement: .toolbar, prompt:  Text("Search"))
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .navigationTitle("Songs")
-            .onAppear {
-                viewModel.getAllSongs()
-            }
-            .task(id: selectedScope) {
+            .animation(.smooth, value: viewModel.filteredMusic.isSuccess())
+            .task(id: selectedScope, priority: .background) {
                 do {
                     try await performSearch(scope: selectedScope, query: searchText)
                 } catch {
@@ -434,6 +430,7 @@ struct MusicListView: View {
                 
                 //await print("perform search", searchText)
                 do {
+                    
                     try await performSearch(scope: selectedScope, query: searchText)
                 } catch {
                     print("✋ Cancelled last search")
