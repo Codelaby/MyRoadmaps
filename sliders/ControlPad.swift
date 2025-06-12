@@ -1,9 +1,3 @@
-//
-//  ControlPad.swift
-//  RangeSlidersPlaygroun
-//
-//  Created by Gerard Coll Roma on 14/9/24.
-//
 
 import SwiftUI
 
