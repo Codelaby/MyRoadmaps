@@ -9,6 +9,7 @@ import SwiftUI
 
 #if os(iOS)
 
+// MARK: Tab define
 // Define your tab enum
 enum MusicAppTab: Int, Equatable, Hashable, Identifiable, CaseIterable , CustomStringConvertible {
     case home
@@ -41,6 +42,7 @@ enum MusicAppTab: Int, Equatable, Hashable, Identifiable, CaseIterable , CustomS
         }
     }
     
+    // MARK: Tab views
     // Associated view for each tab
     @MainActor
     @ViewBuilder
@@ -49,11 +51,12 @@ enum MusicAppTab: Int, Equatable, Hashable, Identifiable, CaseIterable , CustomS
         case .home:
             Text("Home")
         case .new:
-            Text("News")
+            DummyListColorView(title: "New")
         case .radio:
-            Text("Radio")
+            DummyListGradientColorView(title: "Radio")
+
         case .library:
-            DummyListView(title: "Library")
+            DummyListHueView(title: "Library")
 
         case .search:
             NavigationStack {
@@ -67,7 +70,7 @@ enum MusicAppTab: Int, Equatable, Hashable, Identifiable, CaseIterable , CustomS
     }
 }
 
-
+// MARK: Skeletton
 struct AppleMusicSkeletton: View {
     @State private var selectedTab: MusicAppTab = .home
     @State private var searchText: String = ""
@@ -89,19 +92,20 @@ struct AppleMusicSkeletton: View {
             }
         }
         .tabViewBottomAccessory {
-            MiniPlayerInfo()
-                .matchedTransitionSource(id: "MINIPLAYER", in: animation)
+            CompactPlayerInfo()
+                .matchedTransitionSource(id: "COMPACT_PLAYER", in: animation)
                 .onTapGesture {
                     expandMiniPlayer.toggle()
                 }
         }
         .fullScreenCover(isPresented: $expandMiniPlayer) {
-            FullPlayerInfo()
+            LargePlayerInfo()
         }
     }
     
+    // MARK: - Compact Player
     @ViewBuilder
-    private func MiniPlayerInfo() -> some View {
+    private func CompactPlayerInfo() -> some View {
         HStack {
             RoundedRectangle(cornerRadius: 8)
                 .fill(.blue.gradient)
@@ -110,7 +114,9 @@ struct AppleMusicSkeletton: View {
             VStack(alignment: .leading) {
                 Text("Music Song title").font(.callout)
                 
-                Text("Song artist name").font(.caption2).foregroundStyle(.secondary)
+                Text("Song artist name").font(.caption2)
+                    .foregroundStyle(.secondary)
+                    //.foregroundStyle(.gray)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             
@@ -125,8 +131,9 @@ struct AppleMusicSkeletton: View {
         .padding(.horizontal)
     }
     
+    // MARK: - Large Player
     @ViewBuilder
-    private func FullPlayerInfo() -> some View {
+    private func LargePlayerInfo() -> some View {
         
         ScrollView {
             
@@ -137,53 +144,92 @@ struct AppleMusicSkeletton: View {
                     .fill(.primary.secondary)
                     .frame(width: 38, height: 4)
                 
-                MiniPlayerInfo()
+                CompactPlayerInfo()
                     .labelStyle(.iconOnly)
                     .buttonStyle(.glass)
             }
-            .navigationTransition(.zoom(sourceID: "MINIPLAYER", in: animation))
+            .navigationTransition(.zoom(sourceID: "COMPACT_PLAYER", in: animation))
         }
         // To avoid transparency
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.background)
-        //        VStack {
-        //            RoundedRectangle(cornerRadius: 8)
-        //                .fill(.blue.gradient)
-        //                .aspectRatio(1, contentMode: .fit)
-        //                .padding(4)
-        //                .padding(.leading, 16)
-        //            VStack(alignment: .leading) {
-        //                Text("Song title").font(.callout)
-        //
-        //                Text("Song artist name").font(.caption2).foregroundStyle(.secondary)
-        //            }
-        //            .frame(maxWidth: .infinity, alignment: .leading)
-        //
-        //            Button("Play", systemImage: "play.fill") {
-        //                print("play")
-        //            }
-        //            Button("Play", systemImage: "forward.fill") {
-        //                print("forward")
-        //
-        //            }
-        //        }
+
     }
     
     
 }
 
-struct DummyListView: View {
+// MARK: Other Views
+struct DummyListColorView: View {
+    let title: String
+    let colors: [Color] = [
+        .red, .orange, .yellow, .green, .blue,
+        .indigo, .purple, .pink, .mint, .teal, .brown, .cyan, .black, .white, .gray
+    ]
+    
+    var body: some View {
+        NavigationStack {
+            List(0..<100, id: \.self) { i in
+                Text("Item \(i)")
+                    .frame(maxWidth: .infinity)
+                    .listRowBackground(colors[i % colors.count].opacity(0.9))
+            }
+            .listRowSpacing(16)
+            .navigationTitle(title)
+            .scrollEdgeEffectStyle(.soft, for: .vertical)
+            .toolbarTitleDisplayMode(.inlineLarge)
+        }
+    }
+}
+struct DummyListGradientColorView: View {
+    let title: String
+    let colors: [Color] = [
+        .red, .orange, .yellow, .green, .blue,
+        .indigo, .purple, .pink, .mint, .teal, .brown, .cyan, .black, .white, .gray
+    ]
+    
+    var body: some View {
+        NavigationStack {
+            List(0..<100, id: \.self) { i in
+                let currentIndex = i % colors.count
+                let nextIndex = (currentIndex + 1) % colors.count
+                
+                Text("Item \(i)")
+                    .frame(maxWidth: .infinity)
+                    .listRowBackground(
+                        LinearGradient(
+                            gradient: Gradient(colors: [
+                                colors[currentIndex].opacity(0.9),
+                                colors[nextIndex].opacity(0.9),
+                                colors[currentIndex].opacity(0.9),
+                                colors[nextIndex].opacity(0.9),
+
+                            ]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+            }
+            .listRowSpacing(16)
+            .navigationTitle(title)
+            .scrollEdgeEffectStyle(.soft, for: .vertical)
+            .toolbarTitleDisplayMode(.inlineLarge)
+        }
+    }
+}
+
+struct DummyListHueView: View {
     let title: String
     var body: some View {
         NavigationStack {
             List(0..<100, id: \.self) { i in
                 Text("Item \(i)")
                     .frame(maxWidth: .infinity)
-                    .listRowBackground(Color.blue.opacity(0.3)
+                    .listRowBackground(Color.blue.opacity(0.5)
                         .hueRotation(.degrees(Double(i) * 3.6))
                     )
-                
             }
+            .listRowSpacing(16)
             .navigationTitle(title)
             .scrollEdgeEffectStyle(.soft, for: .vertical)
             .toolbarTitleDisplayMode(.inlineLarge)
@@ -192,6 +238,7 @@ struct DummyListView: View {
     }
 }
 
+// MARK: Preview
 #Preview {
     AppleMusicSkeletton()
 }
