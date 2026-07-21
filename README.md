@@ -46,7 +46,7 @@ My code snippets for SwiftUI
 </td>
 <td width="33.3%" align="center">
 
-**Base carousel** 
+**Horizontal Stacked Card** 
 
 [<img src="Resources/HorizontalStackedCardCarousel.png" width="220"/>](https://www.youtube.com/shorts/HQYgUVfknMo)
 
