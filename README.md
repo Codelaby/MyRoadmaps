@@ -44,7 +44,15 @@ My code snippets for SwiftUI
 [Get Code](https://www.patreon.com/Codelaby/posts/build-horizontal-123339905)
 
 </td>
+<td width="33.3%" align="center">
 
+**Base carousel** 
+
+[<img src="Resources/HorizontalStackedCardCarousel.png" width="220"/>](https://www.youtube.com/shorts/HQYgUVfknMo)
+
+[Get Code](https://www.patreon.com/Codelaby/posts/scrollable-card-107938506)
+
+</td>
 
 
 </table>
