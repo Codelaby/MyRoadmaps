@@ -1,18 +1,18 @@
 # MyRoadmaps
 My code snippets for SwiftUI
 
-
 <table>
 <tr>
 <td width="33.3%" align="center">
 
-**Background Parallax** 
+**Background Parallax**
 
 [<img src="Resources/backgroundParallax.png" width="220"/>](https://www.youtube.com/shorts/PYapV5zpgy4)
 
 [Get Code](https://www.patreon.com/Codelaby/posts/background-in-110807529)
 
 </td>
+
 <td width="33.3%" align="center">
 
 **Horizontal Parallax Card**
@@ -22,6 +22,7 @@ My code snippets for SwiftUI
 [Get Code](https://www.patreon.com/Codelaby/posts/card-parallax-in-115423537)
 
 </td>
+
 <td width="33.3%" align="center">
 
 **Vertical Parallax**
@@ -37,16 +38,17 @@ My code snippets for SwiftUI
 <tr>
 <td width="33.3%" align="center">
 
-**Base carousel** 
+**Base carousel**
 
 [<img src="Resources/base_carousel.png" width="220"/>](https://www.youtube.com/shorts/xRnlVvt6HHA)
 
 [Get Code](https://www.patreon.com/Codelaby/posts/build-horizontal-123339905)
 
 </td>
+
 <td width="33.3%" align="center">
 
-**Horizontal Stacked Card** 
+**Horizontal Stacked Card**
 
 [<img src="Resources/HorizontalStackedCardCarousel.png" width="220"/>](https://www.youtube.com/shorts/HQYgUVfknMo)
 
@@ -54,5 +56,16 @@ My code snippets for SwiftUI
 
 </td>
 
+<td width="33.3%" align="center">
+
+**Safari-Style Tab Switcher**
+
+[<img src="Resources/safari_bottom_babbar.png" width="220"/>](https://youtube.com/shorts/fe00Q7LGvYo)
+
+[Get Code](https://www.patreon.com/Codelaby/posts/safari-style-tab-164614282)
+
+</td>
+
+</tr>
 
 </table>
