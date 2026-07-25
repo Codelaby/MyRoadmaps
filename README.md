@@ -68,4 +68,18 @@ My code snippets for SwiftUI
 
 </tr>
 
+<tr>
+<td width="33.3%" align="center">
+
+**Swimming Activity Widget Concept**
+
+[<img src="Resources/swimmingWidgetConcept.png" width="220"/>](https://www.youtube.com/shorts/0ZZJifpzSdw)
+
+[Get Code](https://www.patreon.com/Codelaby/posts/swimming-widget-164754201)
+
+</td>
+
+<td width="33.3%"></td>
+<td width="33.3%"></td>
+</tr>
 </table>
