@@ -5,6 +5,16 @@ My code snippets for SwiftUI
 <tr>
 <td width="33.3%" align="center">
 
+**Duotone Image Tint**
+
+[<img src="Resources/duotoneImageTint.png" width="220"/>](https://youtube.com/shorts/RlaL810gzPE)
+
+[Get Code](https://www.patreon.com/Codelaby/posts/duotone-tinted-165169006)
+
+</td>
+
+<td width="33.3%" align="center">
+
 **Flip View**
 
 [<img src="Resources/flipview.png" width="220"/>](https://www.youtube.com/shorts/uwtEUWCWK3Q)
@@ -23,6 +33,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Background Parallax**
@@ -33,9 +46,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Horizontal Parallax Card**
@@ -56,6 +66,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Base carousel**
@@ -66,9 +79,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Horizontal Stacked Card**
@@ -89,6 +99,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Swimming Activity Widget Concept**
@@ -99,6 +112,7 @@ My code snippets for SwiftUI
 
 </td>
 
+<td width="33.3%"></td>
+<td width="33.3%"></td>
 </tr>
-
 </table>
