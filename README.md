@@ -5,6 +5,16 @@ My code snippets for SwiftUI
 <tr>
 <td width="33.3%" align="center">
 
+**Isometric 3D View**
+
+[<img src="Resources/isometric3DView.png" width="220"/>](https://www.youtube.com/shorts/XF383n27dOc)
+
+[Get Code](https://www.patreon.com/Codelaby/posts/isometric-view-165409708)
+
+</td>
+
+<td width="33.3%" align="center">
+
 **QRCodeView**
 
 [<img src="Resources/qrCodeRounded.png" width="220"/>](https://www.youtube.com/shorts/_iZ_s_DmaUY)
@@ -23,6 +33,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Duotone Image Tint**
@@ -33,9 +46,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Flip View**
@@ -56,6 +66,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Background Parallax**
@@ -66,9 +79,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Horizontal Parallax Card**
@@ -89,6 +99,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Base carousel**
@@ -99,9 +112,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Horizontal Stacked Card**
@@ -122,6 +132,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Swimming Activity Widget Concept**
@@ -132,6 +145,8 @@ My code snippets for SwiftUI
 
 </td>
 
+<td width="33.3%"></td>
+<td width="33.3%"></td>
 </tr>
-
 </table>
+
