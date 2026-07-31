@@ -5,6 +5,16 @@ My code snippets for SwiftUI
 <tr>
 <td width="33.3%" align="center">
 
+**QRCodeView**
+
+[<img src="Resources/qrCodeRounded.png" width="220"/>](https://www.youtube.com/shorts/_iZ_s_DmaUY)
+
+[Get Code](https://www.patreon.com/Codelaby/posts/native-rounded-165345991)
+
+</td>
+
+<td width="33.3%" align="center">
+
 **Vertical Blinds ScrollViews**
 
 [<img src="Resources/blindsVScrollView.png" width="220"/>](https://www.instagram.com/reel/DbYzafqBe22/)
@@ -23,6 +33,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Flip View**
@@ -33,9 +46,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Circular Text Stamp**
@@ -56,6 +66,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Horizontal Parallax Card**
@@ -66,9 +79,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Vertical Parallax**
@@ -89,6 +99,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Horizontal Stacked Card**
@@ -99,9 +112,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Safari-Style Tab Switcher**
@@ -122,6 +132,6 @@ My code snippets for SwiftUI
 
 </td>
 
-<td width="33.3%"></td>
 </tr>
+
 </table>
