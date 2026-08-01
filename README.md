@@ -5,6 +5,16 @@ My code snippets for SwiftUI
 <tr>
 <td width="33.3%" align="center">
 
+**Apple Translation Language Picker**
+
+[<img src="Resources/availableLanguagesPicker.png" width="220"/>](https://youtube.com/shorts/_4YKekKnlss)
+
+[Get Code](https://www.patreon.com/Codelaby/posts/swiftui-apple-165466134)
+
+</td>
+
+<td width="33.3%" align="center">
+
 **Isometric 3D View**
 
 [<img src="Resources/isometric3DView.png" width="220"/>](https://www.youtube.com/shorts/XF383n27dOc)
@@ -23,6 +33,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Vertical Blinds ScrollViews**
@@ -33,9 +46,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Duotone Image Tint**
@@ -56,6 +66,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Circular Text Stamp**
@@ -66,9 +79,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Background Parallax**
@@ -89,6 +99,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Vertical Parallax**
@@ -99,9 +112,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Base carousel**
@@ -122,6 +132,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Safari-Style Tab Switcher**
@@ -132,9 +145,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Swimming Activity Widget Concept**
@@ -146,7 +156,7 @@ My code snippets for SwiftUI
 </td>
 
 <td width="33.3%"></td>
-<td width="33.3%"></td>
 </tr>
 </table>
+
 
