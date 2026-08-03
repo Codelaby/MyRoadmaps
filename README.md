@@ -5,6 +5,39 @@ My code snippets for SwiftUI
 <tr>
 <td width="33.3%" align="center">
 
+**Tier graph**
+
+[<img src="Resources/tierGraph.png" width="220"/>](https://youtube.com/shorts/1VlcBFPv34Y)
+
+[Get Code](https://www.patreon.com/Codelaby/posts/tiergraphview-165623414)
+
+</td>
+
+<td width="33.3%" align="center">
+
+**Get Screen Corner Radius**
+
+[<img src="Resources/getScreenCornerRadius.png" width="220"/>](https://youtube.com/shorts/4ZpNcbPWenE)
+
+[Get Code](https://www.patreon.com/Codelaby/posts/getting-device-127422000)
+
+</td>
+
+<td width="33.3%" align="center">
+
+**Day Week Picker**
+
+[<img src="Resources/dayWeekPicker.png" width="220"/>](https://www.youtube.com/shorts/gDgCKKafH5k)
+
+[Get Code](https://www.patreon.com/Codelaby/posts/semantic-day-in-113144033)
+
+</td>
+
+</tr>
+
+<tr>
+<td width="33.3%" align="center">
+
 **Apple Translation Language Picker**
 
 [<img src="Resources/availableLanguagesPicker.png" width="220"/>](https://youtube.com/shorts/_4YKekKnlss)
@@ -158,5 +191,4 @@ My code snippets for SwiftUI
 <td width="33.3%"></td>
 </tr>
 </table>
-
 
