@@ -7,7 +7,7 @@ My code snippets for SwiftUI
 
 **Advertisement View**
 
-[<img src="Resources/AdvertisementView.png" width="220"/>]()
+[<img src="Resources/AdvertisementView.png" width="220"/>](https://github.com/Codelaby/MyRoadmaps/blob/main/sourcecode/AdvertisementView.swift)
 
 [Get Code](https://github.com/Codelaby/MyRoadmaps/blob/main/sourcecode/AdvertisementView.swift)
 
