@@ -7,7 +7,7 @@ My code snippets for SwiftUI
 
 **Advertisement View**
 
-[<img src="Resources/AdvertisementView.png" width="220"/>](https://youtube.com/shorts/JxlutRq_zK4.swift)
+[<img src="Resources/AdvertisementView.png" width="220"/>](https://youtube.com/shorts/JxlutRq_zK4)
 
 [Get Code](https://www.patreon.com/Codelaby/posts/custom-ad-banner-167847421)
 
@@ -314,4 +314,3 @@ My code snippets for SwiftUI
 <td width="33.3%"></td>
 </tr>
 </table>
-
