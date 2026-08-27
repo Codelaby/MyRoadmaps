@@ -7,9 +7,19 @@ My code snippets for SwiftUI
 
 **Advertisement View**
 
-[<img src="Resources/AdvertisementView.png" width="220"/>](https://github.com/Codelaby/MyRoadmaps/blob/main/sourcecode/AdvertisementView.swift)
+[<img src="Resources/AdvertisementView.png" width="220"/>](https://youtube.com/shorts/JxlutRq_zK4.swift)
 
-[Get Code](https://github.com/Codelaby/MyRoadmaps/blob/main/sourcecode/AdvertisementView.swift)
+[Get Code](https://www.patreon.com/Codelaby/posts/custom-ad-banner-167847421)
+
+</td>
+
+<td width="33.3%" align="center">
+
+**Leading Hero Carousel**
+
+[<img src="Resources/LeadingHeroCarousel.png" width="220"/>](https://youtu.be/4iT700c3xX0)
+
+[Get Code](https://www.patreon.com/Codelaby/posts/hero-carousel-115469157)
 
 </td>
 
@@ -23,6 +33,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Neon Glow Effect**
@@ -33,9 +46,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Multi Reorder Group**
@@ -56,6 +66,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Dynamic Scroll Header**
@@ -66,9 +79,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Symbol Toggle Style**
@@ -89,6 +99,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Metallic colors**
@@ -99,9 +112,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Rounded Ribbon**
@@ -122,6 +132,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Get Screen Corner Radius**
@@ -132,9 +145,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Day Week Picker**
@@ -155,6 +165,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Isometric 3D View**
@@ -165,9 +178,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **QRCodeView**
@@ -188,6 +198,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Duotone Image Tint**
@@ -198,9 +211,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Flip View**
@@ -221,6 +231,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Background Parallax**
@@ -231,9 +244,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Horizontal Parallax Card**
@@ -254,6 +264,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Base carousel**
@@ -264,9 +277,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Horizontal Stacked Card**
@@ -287,6 +297,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Swimming Activity Widget Concept**
@@ -297,6 +310,8 @@ My code snippets for SwiftUI
 
 </td>
 
+<td width="33.3%"></td>
+<td width="33.3%"></td>
 </tr>
-
 </table>
+
