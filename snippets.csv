@@ -1,5 +1,31 @@
-title,media,link
-Checkboard View,https://github.com/Codelaby/MyRoadmaps/blob/main/Resources/checkboardView.gif,https://www.patreon.com/Codelaby/posts/draw-in-swiftui-136383369 
-
-
-      
+Name,Image URL,Video URL,Code URL
+Interactive Newton's Cradle,Resources/InteractiveNewtonCradle.png,https://www.youtube.com/shorts/GaLZcswFlAc,https://www.patreon.com/Codelaby/posts/interactive-168280437
+Monochromatic Badges,Resources/MonochromaticBadges.png,https://www.youtube.com/shorts/NZA0P7hDHGk,https://www.patreon.com/Codelaby/posts/monochromatic-168172453
+Advertisement View,Resources/AdvertisementView.png,https://youtube.com/shorts/JxlutRq_zK4,https://www.patreon.com/Codelaby/posts/custom-ad-banner-167847421
+Leading Hero Carousel,Resources/LeadingHeroCarousel.png,https://youtu.be/4iT700c3xX0,https://www.patreon.com/Codelaby/posts/hero-carousel-115469157
+Hero Carousel Centered,Resources/heroCarouselCentered.png,https://youtube.com/shorts/64R2bM7cm28,https://www.patreon.com/Codelaby/posts/hero-carousel-115469157
+Neon Glow Effect,Resources/neonGlowEffect.png,https://www.youtube.com/shorts/mL299gv5dDc,https://www.patreon.com/Codelaby/posts/glow-effect-in-167627665
+Multi Reorder Group,Resources/multiReorderGroup.png,https://www.youtube.com/shorts/7Y6xBz1ZPq0,https://www.patreon.com/Codelaby/posts/multi-item-in-167444503
+Animated Success Burst,Resources/AnimatedSuccessBurst.png,https://www.youtube.com/shorts/E_ncouCXYPk,https://www.patreon.com/Codelaby/posts/animated-success-167392190
+Dynamic Scroll Header,Resources/dynamicHeaderDemo.png,https://www.youtube.com/shorts/Pvaoc_owRMU,https://www.patreon.com/Codelaby/posts/dynamic-header-167020076
+Symbol Toggle Style,Resources/symbolToggleStyle.png,https://www.youtube.com/shorts/xGh3ZQ1L2VU,https://www.patreon.com/Codelaby/posts/symboltogglestyl-166996505
+Custom Prominent TabBar,Resources/ProminentTabBar.png,https://www.youtube.com/shorts/MkQ70b5O8aM,https://www.patreon.com/Codelaby/posts/custom-prominent-166851448
+Metallic colors,Resources/MetallicColor.png,https://www.youtube.com/shorts/lmZ6M1rcRAg,https://www.patreon.com/Codelaby/posts/metallic-colors-166408016
+Rounded Ribbon,Resources/RoundedRibbon.png,https://www.youtube.com/shorts/Q_vTdmVtqCQ,https://www.patreon.com/Codelaby/posts/rounded-ribbon-166178665
+Tier graph,Resources/tierGraph.png,https://youtube.com/shorts/1VlcBFPv34Y,https://www.patreon.com/Codelaby/posts/tiergraphview-165623414
+Get Screen Corner Radius,Resources/getScreenCornerRadius.png,https://youtube.com/shorts/4ZpNcbPWenE,https://www.patreon.com/Codelaby/posts/getting-device-127422000
+Day Week Picker,Resources/dayWeekPicker.png,https://www.youtube.com/shorts/gDgCKKafH5k,https://www.patreon.com/Codelaby/posts/semantic-day-in-113144033
+Apple Translation Language Picker,Resources/availableLanguagesPicker.png,https://youtube.com/shorts/_4YKekKnlss,https://www.patreon.com/Codelaby/posts/swiftui-apple-165466134
+Isometric 3D View,Resources/isometric3DView.png,https://www.youtube.com/shorts/XF383n27dOc,https://www.patreon.com/Codelaby/posts/isometric-view-165409708
+QRCodeView,Resources/qrCodeRounded.png,https://www.youtube.com/shorts/_iZ_s_DmaUY,https://www.patreon.com/Codelaby/posts/native-rounded-165345991
+Vertical Blinds ScrollViews,Resources/blindsVScrollView.png,https://www.instagram.com/reel/DbYzafqBe22/,https://www.patreon.com/Codelaby/posts/dynamic-blinds-126716753
+Duotone Image Tint,Resources/duotoneImageTint.png,https://youtube.com/shorts/RlaL810gzPE,https://www.patreon.com/Codelaby/posts/duotone-tinted-165169006
+Flip View,Resources/flipview.png,https://www.youtube.com/shorts/uwtEUWCWK3Q,https://www.patreon.com/Codelaby/posts/flipview-turn-in-114165518
+Circular Text Stamp,Resources/circularTextStamp.png,https://www.youtube.com/shorts/4z-MUNBTAf4,https://www.patreon.com/Codelaby/posts/circular-text-in-164960102
+Background Parallax,Resources/backgroundParallax.png,https://www.youtube.com/shorts/PYapV5zpgy4,https://www.patreon.com/Codelaby/posts/background-in-110807529
+Horizontal Parallax Card,Resources/ParallaxHCard.png,https://youtube.com/shorts/fOu5RkcuiZk,https://www.patreon.com/Codelaby/posts/card-parallax-in-115423537
+Vertical Parallax,Resources/VerticalParallaxScrollView.png,https://www.youtube.com/shorts/sXjTmhSDTCI,https://www.patreon.com/Codelaby/posts/vertical-in-163345044
+Base carousel,Resources/base_carousel.png,https://www.youtube.com/shorts/xRnlVvt6HHA,https://www.patreon.com/Codelaby/posts/build-horizontal-123339905
+Horizontal Stacked Card,Resources/HorizontalStackedCardCarousel.png,https://www.youtube.com/shorts/HQYgUVfknMo,https://www.patreon.com/Codelaby/posts/scrollable-card-107938506
+Safari-Style Tab Switcher,Resources/safari_bottom_babbar.png,https://youtube.com/shorts/fe00Q7LGvYo,https://www.patreon.com/Codelaby/posts/safari-style-tab-164614282
+Swimming Activity Widget Concept,Resources/swimmingWidgetConcept.png,https://www.youtube.com/shorts/0ZZJifpzSdw,https://www.patreon.com/Codelaby/posts/swimming-widget-164754201
