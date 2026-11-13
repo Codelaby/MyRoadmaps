@@ -5,6 +5,26 @@ My code snippets for SwiftUI
 <tr>
 <td width="33.3%" align="center">
 
+**Single Group Card Picker**
+
+[<img src="Resources/SingleGroupCardPicker.png" width="220"/>](https://youtube.com/shorts/BjX9XFEWo8o)
+
+[Get Code](https://www.patreon.com/Codelaby/posts/single-multi-ios-175220922)
+
+</td>
+
+<td width="33.3%" align="center">
+
+**Multi Group Card Picker**
+
+[<img src="Resources/MultiGroupCardPicker.png" width="220"/>](https://youtube.com/shorts/0m_fHO9tVtk)
+
+[Get Code](https://www.patreon.com/Codelaby/posts/single-multi-ios-175220922)
+
+</td>
+
+<td width="33.3%" align="center">
+
 **Scroll Horizontal Grids**
 
 [<img src="Resources/ScrollHGrid.png" width="220"/>](https://www.youtube.com/shorts/vMFjo9-lvrg)
@@ -13,6 +33,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Journal Grids**
@@ -33,9 +56,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Radial Health Chart**
@@ -46,6 +66,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Share Progres sOnboarding**
@@ -66,9 +89,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Monochromatic Badges**
@@ -79,6 +99,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Advertisement View**
@@ -99,9 +122,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Hero Carousel Centered**
@@ -112,6 +132,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Neon Glow Effect**
@@ -132,9 +155,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Animated Success Burst**
@@ -145,6 +165,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Dynamic Scroll Header**
@@ -165,9 +188,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Custom Prominent TabBar**
@@ -178,6 +198,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Metallic colors**
@@ -198,9 +221,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Tier graph**
@@ -211,6 +231,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Get Screen Corner Radius**
@@ -231,9 +254,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Apple Translation Language Picker**
@@ -244,6 +264,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Isometric 3D View**
@@ -264,9 +287,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Vertical Blinds ScrollViews**
@@ -277,6 +297,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Duotone Image Tint**
@@ -297,9 +320,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Circular Text Stamp**
@@ -310,6 +330,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Background Parallax**
@@ -330,9 +353,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Vertical Parallax**
@@ -343,6 +363,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Base carousel**
@@ -363,9 +386,6 @@ My code snippets for SwiftUI
 
 </td>
 
-</tr>
-
-<tr>
 <td width="33.3%" align="center">
 
 **Safari-Style Tab Switcher**
@@ -376,6 +396,9 @@ My code snippets for SwiftUI
 
 </td>
 
+</tr>
+
+<tr>
 <td width="33.3%" align="center">
 
 **Swimming Activity Widget Concept**
@@ -386,30 +409,8 @@ My code snippets for SwiftUI
 
 </td>
 
-<td width="33.3%" align="center">
-
-**Single Group Card Picker**
-
-[<img src="Resources/SingleGroupCardPicker.png" width="220"/>](https://youtube.com/shorts/BjX9XFEWo8o)
-
-[Get Code](https://www.patreon.com/Codelaby/posts/single-multi-ios-175220922)
-
-</td>
-
-</tr>
-
-<tr>
-<td width="33.3%" align="center">
-
-**Multi Group Card Picker**
-
-[<img src="Resources/MultiGroupCardPicker.png" width="220"/>](https://youtube.com/shorts/048oAQjqeDw)
-
-[Get Code](https://www.patreon.com/Codelaby/posts/single-multi-ios-175220922)
-
-</td>
-
 <td width="33.3%"></td>
 <td width="33.3%"></td>
 </tr>
 </table>
+
